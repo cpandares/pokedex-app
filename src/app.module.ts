@@ -3,6 +3,8 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { PokemonModule } from './pokemon/pokemon.module';
 
+import { MongooseModule } from '@nestjs/mongoose';
+
 
 @Module({
   imports: [
@@ -12,6 +14,7 @@ import { PokemonModule } from './pokemon/pokemon.module';
         
       },
     ),
+    MongooseModule.forRoot('mongodb://localhost:27017/nest-pokeapi'),
     PokemonModule,
   ],
   
