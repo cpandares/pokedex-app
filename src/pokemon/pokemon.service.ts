@@ -103,4 +103,14 @@ export class PokemonService {
       throw new InternalServerErrorException(`Unknown error: ${error}`);
     }
   }
+
+  async deleteAllPokemon(){
+    const { deletedCount } = await this.pokemonModel.deleteMany({});
+    if ( deletedCount === 0) {
+      throw new BadRequestException(`Pokemon not found`);
+    }
+    return deletedCount;
+  }
+
+
 }

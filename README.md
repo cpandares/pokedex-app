@@ -17,6 +17,16 @@ npm install -g @nestjs/cli
 docker-compose up -d
 ```
 
+5. Levantar el servidor
+```bash
+npm run start:dev
+```
+
+6. Popular la base de datos con los datos de prueba. IMPORTANTE TENER MONGO DB INSTALADO Y CORRIENDO
+```bash
+ http://localhost:3000/api/v2/seed
+```
+
 
 # Tecnologías utilizadas
 - NestJS
