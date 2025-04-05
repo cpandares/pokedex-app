@@ -36,6 +36,18 @@ npm run start:dev
 ```
 
 
+# Production Build
+1. Crear el .env.prod 
+2. LLenar las variables de entorno necesarias. Puedes usar el archivo .env.example como referencia.
+3. Crear la imagen de docker
+```bash
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+4. Levantar el contenedor de producción
+```bash
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+``` 
+
 # Tecnologías utilizadas
 - NestJS
 - TypeScript

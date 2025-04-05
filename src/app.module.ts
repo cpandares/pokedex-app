@@ -27,7 +27,9 @@ import { JoiConfig } from './config/joi.config';
         
       },
     ),
-    MongooseModule.forRoot( process.env.MONGO_DB! ),
+    MongooseModule.forRoot( process.env.MONGO_DB! ,{
+      dbName: process.env.DB_NAME,
+    } ),
     PokemonModule,  
     CommonModule,
     SeedModule,
