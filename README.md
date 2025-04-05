@@ -17,12 +17,20 @@ npm install -g @nestjs/cli
 docker-compose up -d
 ```
 
-5. Levantar el servidor
+5. Crear un archivo .env en la raíz del proyecto y agregar las variables de entorno necesarias. Puedes usar el archivo .env.example como referencia.
+```bash
+# .env
+MONGO_URI=mongodb://localhost:27017/mi_base_de_datos
+PORT=3000
+DEFAULT_LIMIT=10
+````
+
+6. Levantar el servidor
 ```bash
 npm run start:dev
 ```
 
-6. Popular la base de datos con los datos de prueba. IMPORTANTE TENER MONGO DB INSTALADO Y CORRIENDO
+7. Popular la base de datos con los datos de prueba. IMPORTANTE TENER MONGO DB INSTALADO Y CORRIENDO
 ```bash
  http://localhost:3000/api/v2/seed
 ```
